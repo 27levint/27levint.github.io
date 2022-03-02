@@ -7,7 +7,9 @@
   overflow-x: hidden;
   }
 
-
+i {
+  background-color: white;
+}
 
 .topnav {
   overflow: hidden;
@@ -20,14 +22,14 @@
   display: block;
   color: rgb(54, 54, 56);
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 4px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   background-color: white;
   font-family: 'Bebas Neue';
 }
 
-.topnav a:hover {
+.topnav a:hover, i:hover {
   background-color: deepskyblue;
   color: black;
 }
@@ -492,9 +494,6 @@ a {
 }
 
 @media screen and (max-width: 736px) {
-  .topnav a {
-    font-size: 13px;
-  }
   h2 {
     font-size: 23px;
   }
@@ -620,4 +619,20 @@ h6 {
   .answers {
     font-size: 10px;
   }
+}
+
+/*submit a quiz styling section*/
+
+.submheader {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 25px;
+  color: darkslategray;
+}
+
+.hide {
+  display: none;
+}
+
+.hide:hover {
+  display: inline;
 }
