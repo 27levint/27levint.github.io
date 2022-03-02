@@ -1,0 +1,623 @@
+* {
+  margin: 10px;
+  border: 10px;
+  padding: 3px;
+  background-color: deepskyblue;
+  z-index: -2;
+  overflow-x: hidden;
+  }
+
+
+
+.topnav {
+  overflow: hidden;
+  background-color: white;
+  z-index: +1;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: rgb(54, 54, 56);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  background-color: white;
+  font-family: 'Bebas Neue';
+}
+
+.topnav a:hover {
+  background-color: deepskyblue;
+  color: black;
+}
+
+.topnav a:active {
+  background-color: deepskyblue;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+
+@viewport {
+  width: device-width;
+  zoom: 1.0 ;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+/*Background animation*/
+
+
+.circles {
+	position: absolute;
+  background-color: deepskyblue;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  z-index: -1;
+  margin-top: -600px;
+}
+
+.circles li {
+	position: absolute;
+	display: block;
+	list-style: none;
+	width: 20px;
+	height: 20px;
+	background: rgb(54, 54, 56);
+	animation: animate 70s linear infinite;
+	bottom: calc(-150px - 40vh);
+}
+
+.circles li:nth-child(1) {
+	left: 25%;
+	width: 80px;
+	height: 80px;
+	animation-delay: 0s;
+	animation-duration: 70s;
+	border-radius: 50%;
+	border-top-left-radius: 0 !important;
+	background: rgb(54,54,56);
+}
+
+.circles li:nth-child(2) {
+	left: 10%;
+	width: 20px;
+	height: 20px;
+	animation-delay: 0s;
+	animation-duration: 70s;
+	border-radius: 50%;
+	border-top-left-radius: 0 !important;
+	background: rgba(44, 59, 61, 0.1);
+}
+
+.circles li:nth-child(3) {
+	left: 70%;
+	width: 20px;
+	height: 20px;
+	animation-delay: 0s;
+	animation-duration: 70s;
+	border-radius: 50%;
+	border-top-left-radius: 0 !important;
+	background: rgb(54,54,56);
+}
+
+.circles li:nth-child(4) {
+	left: 40%;
+	width: 60px;
+	height: 60px;
+	animation-delay: 0s;
+	animation-duration: 70s;
+	border-radius: 50%;
+	border-top-left-radius: 0 !important;
+	background: rgba(76, 66, 82, 0.1);
+}
+
+.circles li:nth-child(5) {
+	left: 65%;
+	width: 20px;
+	height: 20px;
+	animation-delay: 0s;
+	animation-duration: 70s;
+	border-radius: 50%;
+	border-top-left-radius: 0 !important;
+	background: rgba(86, 128, 136, 0.1);
+}
+
+.circles li:nth-child(6) {
+	left: 75%;
+	width: 90px;
+	height: 90px;
+	animation-delay: 0s;
+	animation-duration: 70s;
+	border-radius: 50%;
+	border-top-left-radius: 0 !important;
+	background: rgba(114, 63, 145, 0.1);
+}
+
+.circles li:nth-child(7) {
+	left: 35%;
+	width: 50px;
+	height: 50px;
+	animation-delay: 0s;
+	animation-duration: 70s;
+	border-radius: 50%;
+	border-top-left-radius: 0 !important;
+	background: rgba(47, 44, 92, 0.1);
+}
+
+.circles li:nth-child(8) {
+	left: 50%;
+	width: 25px;
+	height: 25px;
+	animation-delay: 0s;
+	animation-duration: 70s;
+	border-radius: 50%;
+	border-top-left-radius: 0 !important;
+	background: rgba(114, 63, 145, 0.1);
+}
+
+.circles li:nth-child(9) {
+	left: 20%;
+	width: 15px;
+	height: 15px;
+	animation-delay: 0s;
+	animation-duration: 70s;
+	border-radius: 50%;
+	border-top-left-radius: 0 !important;
+	background: rgba(47, 44, 92, 0.1);
+}
+
+.circles li:nth-child(10) {
+	left: 85%;
+	width: 50px;
+	height: 50px;
+	animation-delay: 0s;
+	animation-duration: 70s;
+	border-radius: 50%;
+	border-top-left-radius: 0 !important;
+	background: rgba(96, 183, 199, 0.1);
+}
+
+@keyframes animate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 0;
+	}
+	50% {
+		transform: translateY(-60vh) rotate(360deg);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-120vh) rotate(720deg);
+		opacity: 0;
+	}
+}
+
+.squares {
+	position: absolute;
+  background-color: deepskyblue;
+	bottom: 100px;
+	left: 100px;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.squares li {
+	position: absolute;
+	display: block;
+	list-style: none;
+	width: 20px;
+	height: 20px;
+	background: rgba(64, 89, 94, 0.1);
+	animation: animate 70s linear infinite;
+	bottom: calc(-150px - 40vh);
+}
+
+.squares li:nth-child(1) {
+	left: 25%;
+	width: 80px;
+	height: 80px;
+	animation-delay: 0s;
+	animation-duration: 70s;
+	border-radius: 10%;
+	border-top-left-radius: 0 !important;
+	background: rgba(34, 33, 53, 0.1);
+}
+
+.squares li:nth-child(2) {
+	left: 10%;
+	width: 20px;
+	height: 20px;
+	animation-delay: 0s;
+	animation-duration: 70s;
+	border-radius: 10%;
+	border-top-left-radius: 0 !important;
+	background: rgba(68, 110, 117, 0.1);
+}
+
+.squares li:nth-child(3) {
+	left: 70%;
+	width: 20px;
+	height: 20px;
+	animation-delay: 0s;
+	animation-duration: 70s;
+	border-radius: 10%;
+	border-top-left-radius: 0 !important;
+	background: rgba(47, 44, 92, 0.1);
+}
+
+.squares li:nth-child(4) {
+	left: 40%;
+	width: 60px;
+	height: 60px;
+	animation-delay: 0s;
+	animation-duration: 70s;
+	border-radius: 10%;
+	border-top-left-radius: 0 !important;
+	background: rgba(74, 50, 88, 0.1);
+}
+
+.squares li:nth-child(5) {
+	left: 65%;
+	width: 20px;
+	height: 20px;
+	animation-delay: 0s;
+	animation-duration: 70s;
+	border-radius: 10%;
+	border-top-left-radius: 0 !important;
+	background: rgba(60, 80, 83, 0.1);
+}
+
+.squares li:nth-child(6) {
+	left: 75%;
+	width: 90px;
+	height: 90px;
+	animation-delay: 0s;
+	animation-duration: 70s;
+	border-radius: 10%;
+	border-top-left-radius: 0 !important;
+	background: rgba(114, 63, 145, 0.1);
+}
+
+.squares li:nth-child(7) {
+	left: 35%;
+	width: 50px;
+	height: 50px;
+	animation-delay: 0s;
+	animation-duration: 70s;
+	border-radius: 10%;
+	border-top-left-radius: 0 !important;
+	background: rgba(47, 44, 92, 0.1);
+}
+
+.squares li:nth-child(8) {
+	left: 50%;
+	width: 25px;
+	height: 25px;
+	animation-delay: 0s;
+	animation-duration: 70s;
+	border-radius: 10%;
+	border-top-left-radius: 0 !important;
+	background: rgba(114, 63, 145, 0.1);
+}
+
+.squares li:nth-child(9) {
+	left: 20%;
+	width: 15px;
+	height: 15px;
+	animation-delay: 0s;
+	animation-duration: 70s;
+	border-radius: 10%;
+	border-top-left-radius: 0 !important;
+	background: rgba(47, 44, 92, 0.1);
+}
+
+.squares li:nth-child(10) {
+	left: 85%;
+	width: 50px;
+	height: 50px;
+	animation-delay: 0s;
+	animation-duration: 70s;
+	border-radius: 10%;
+	border-top-left-radius: 0 !important;
+	background: rgba(96, 183, 199, 0.1);
+}
+
+@keyframes animate {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 0;
+	}
+	50% {
+		transform: translateY(-60vh) rotate(360deg);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-120vh) rotate(720deg);
+		opacity: 0;
+	}
+}
+
+/*Css grids for orgnizing the .study section*/
+.grid {
+  display: grid;
+  background-color: none;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 175px);
+
+}
+@media only screen and (max-screen-width: 736px){
+ display: grid;
+  background-color: none;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 175px);
+}
+
+
+@media only screen and (min-screen-width: 736px){
+  display: grid;
+  background-color: none;
+  grid-template-columns: repeat(3, 350px);
+  grid-auto-rows: 350px;
+}
+
+
+.grid div:nth-child(even){
+  background-color: white;
+  justify-content: center;
+  font-family: 'Bebas Neue';
+  border-radius: 10px;
+  z-index: +2;
+}
+.grid div:nth-child(odd) {
+  background-color: white;
+  font-family: 'Bebas Neue';
+  justify-content: center;
+  border-radius: 10px;
+  z-index: +2;
+}
+
+
+
+
+
+/*title banner */
+
+.titlebanner {
+font-family: 'Bebas Neue';
+font-weight: 10rem;
+font-size: 400%;
+color: white;
+text-emphasis: emphasis;
+grid-column: 3-4fr;
+text-align: center;
+z-index: +1;
+}
+
+h6 {
+font-family: 'Bebas Neue';
+font-weight: 20rem;
+font-size: 60px;
+ color: white;
+text-emphasis: emphasis;
+grid-column: 2fr;
+text-align: center; 
+z-index: +1;
+}
+
+h {
+  font-size: 200%;
+  z-index: +1;
+}
+
+@media screen and (max-width:1000px)
+{
+  h6 {
+    font-size: 20px;
+  }
+  .squares, .circles {
+    display: none;
+  }
+}
+
+h2 {
+  color: white;
+  font-family: 'Bebas Neue';
+  font-size: 80px;
+  z-index: +1;
+}
+
+.study {
+  text-align: center;
+  z-index: +1
+}
+
+hr {
+  background-color: black;
+}
+
+button {
+  background-color: white;
+  justify-content: top;
+  color:darkslategray;
+  font-family: 'Bebas Neue';
+  display: block;
+  border: 1px solid white;
+  border-radius: 5px;
+  width: 200px;
+  height: 200px;
+}
+
+/*
+.mathbutton{
+  position: left;
+  height: 100px;
+}
+.sciencebutton{
+  position: right;
+  height: 100px;
+}
+.elabutton {
+  position: bottom-left;
+  height: 100px;
+  margin-top: -40px;
+}
+.ssbutton {
+  position: bottom-right;
+  height: 100px;
+  margin-top: -40px;
+  text-align: center;
+}
+  */
+
+
+button:hover {
+ cursor: pointer;
+}
+
+a {
+  font-size: 30px;
+  text-decoration: none;
+  color: darkslategrey;
+ background-color: white
+}
+
+@media screen and (max-width: 736px) {
+  .topnav a {
+    font-size: 13px;
+  }
+  h2 {
+    font-size: 23px;
+  }
+  h6 {
+    font-size: 13px;
+  }
+  ul {
+    font-size: 20px;
+  }
+  .hide {
+    font-size: 0.1px;
+  }
+}
+
+#myInput {
+  background-color: white;
+  border: 1px solid silver;
+  border-radius: 5px;
+  width: 140px;
+  z-index: +1;
+}
+
+.addBtn {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-family: 'Bebas Neue';
+  z-index: +1;
+}
+
+ul {
+  list-style: none;
+  font-family: "Bebas Neue";
+  font-size: 30px;
+
+}
+
+.close {
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+  cursor: pointer;
+}
+
+.header {
+  background-color: white;
+}
+
+ul li.checked {
+  text-decoration: line-through;
+}
+
+.hide {
+  color: black;
+  display: inline;
+  font-size: 0px;
+  background-color: black;
+}
+
+h6 {
+  color: rgb(54,54,56);
+  z-index: +1;
+  border-bottom: 5px;
+  border-bottom-color: rgb(54,54,56);
+}
+
+
+/*Math Section Styling*/
+  .mathTitleBanner {
+    font-size: 10rem;
+  }
+
+.grid {
+  align-content: center;
+}
+
+.question{
+	font-weight: 600;
+  font-family: 'Bebas Neue';
+  font-size: 40px;
+  border: 1px solid white;
+  background-color: white;
+}
+.answers {
+  margin-bottom: 20px;
+  font-family: 'Bebas Neue';
+  font-size: 30px;
+  border: 1px solid white;
+}
+.answers label{
+  display: block;
+}
+
+#submit {
+  font-size: 3rem;
+  height: 60px;
+  overflow: hidden;
+}
+
+#results {
+  font-family: 'Bebas Neue';
+  font-size: 20px;
+}
+
+.studyguide {
+  width: 96%;
+}
+
+@media only screen and (max-width: 1000px) {
+  .ssa {
+    display: none;
+  }
+  .studyguide {
+    width: 94%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .question {
+    font-size: 20px;
+  }
+
+  .answers {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,168 @@
+*{
+  margin: 0px;
+  padding: 0px;
+ background-color: red;
+}
+.grid {
+  display: grid;
+  height: inherit;
+  overflow: auto;
+  place-content: top-center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 300px;
+  column-gap: 1em;
+  row-gap: 1em;
+  background-color: rgb(194, 98, 98);
+  grid-template-areas: "page-container mathtitlebanner .";
+
+}
+
+
+@media screen and (min-width:736px) {
+  .grid {
+  display: grid;
+  height: inherit;
+  overflow: auto;
+  grid-template-columns: repeat(2, 150px);
+  grid-auto-rows: 150px;
+  column-gap: 0.5em;
+  row-gap: 0.5em;
+  background-color: rgb(194, 98, 98);
+  grid-template-areas: 
+  ""; /*tb defined*/
+}
+
+/*Collapsable navbar*/
+
+:root {
+  --nav-icon-width: 50px;
+  --nav-border-width: 8px;
+  --background: blue;
+  margin: 0px;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.page-container {
+  height: inherit;
+  display: flex;
+}
+
+.main {
+  height: inherit;
+  padding: 0;
+  margin: 0px;
+  padding-left: var(--nav-border-width);
+  overflow-y: auto;
+}
+
+.nav{
+  width: 200px;
+  height: inherit;
+  position: relative;
+  background-color: grey;
+  transition: width 0.2;
+  flex-shrink: 0;
+}
+
+.nav--collapsed{
+  width: var(--nav-icon-width);
+  background-color: var(--background-color);
+}
+
+.nav--collapsed .navlink{
+display: none;
+}
+
+.navlink {
+  display: flex;
+  flex-shrink: 0;
+  width: 200px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0,0,0,0.75);
+  text-decoration: none;
+  background-color: grey;
+}
+
+
+.navlink:hover{
+background-color: maroon;
+transform: scale(1.1);
+Transition: 0.5s;
+
+}
+
+
+/*
+.naviconcontainer {
+  Width: var(--nav-icon-width);
+  height: var(--nav-icon-width);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: navlink;
+}
+*/
+
+.navlabel {
+  white-space: nowrap;
+  background-color: grey;
+}
+
+.navlink:hover .navlabel{
+  background-color: maroon;
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.navborder {
+  position: top-right;
+  left: 100%;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-color: maroon;
+  transition: background-color 0.2s;
+  cursor: ew-rewsize;
+}
+
+.navborder:hover {
+transform: scale(1.05);
+background-color: black;
+}
+
+#mi {
+ font-size: 36px;
+ color: black;
+ background-color: maroon;
+ position: top-right;
+}
+
+.navborder:hover #mi{
+transform: scale(1.05);
+background-color: black;
+color: white;
+font-size: 48px;
+}
+
+/*Mathtitlebanner*/
+
+.mathpage {
+ height: 150px;
+ width: inherit;
+ background-color: rgb(194, 98, 98);
+}
+
+.mathtitlebanner {
+  font-size: 10rem;
+  font-family: 'Bebas Neue';
+  position: top-center;
+}
