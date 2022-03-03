@@ -24,7 +24,7 @@ i {
   text-align: center;
   padding: 14px 4px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 40px;
   background-color: white;
   font-family: 'Bebas Neue';
 }
@@ -498,6 +498,9 @@ a {
   }
   .hide {
     font-size: 0.1px;
+  }
+  .topnav a {
+    font-size: 20px;
   }
 }
 
