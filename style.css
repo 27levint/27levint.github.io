@@ -22,9 +22,9 @@ i {
   display: block;
   color: rgb(54, 54, 56);
   text-align: center;
-  padding: 14px 4px;
+  padding: space-evenly;
   text-decoration: none;
-  font-size: 40px;
+  font-size: 60px;
   background-color: white;
   font-family: 'Bebas Neue';
 }
@@ -500,7 +500,7 @@ a {
     font-size: 0.1px;
   }
   .topnav a {
-    font-size: 20px;
+    font-size: 45px;
   }
 }
 
@@ -633,4 +633,13 @@ h6 {
 
 .hide:hover {
   display: inline;
+}
+
+.flag {
+  font-size: 4.5rem;
+  background-color: white;
+}
+
+.plus {
+  margin-top: -50px;
 }
