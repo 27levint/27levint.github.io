@@ -111,58 +111,58 @@
       correctAnswer: "b"
     },
     {
-      question: "Which of the following is a similarity between Sikhism and Hinduism?",
+      question: "Why was it important for China to conquer Tibet?",
       answers: {
-        a: "Monotheism",
-        b: "Polytheism",
-        c: "The karmic cycle of reincarnation cannot be overcome until each person achieves oneness with God"
-      },
-      correctAnswer: "c"
-    },
-    {
-      question: "Which of the following is a similarity between Sikhism and Islam?",
-      answers: {
-        a: "Monotheism",
-        b: "Polyheism",
-        c: "Sultans"
-      },
-      correctAnswer: "a"
-    },
-    {
-      question: "The British East India Company was created to create a monopoly on...",
-      answers: {
-        a: "Tea",
-        b: "Spice",
-        c: "Oil"
+        a: "To Have more land for farming",
+        b: "To Control Their water supply",
+        c: "Prevent Invasions from the Tibetans"
       },
       correctAnswer: "b"
     },
     {
-      question: "British Soliders in India...",
+      question: "What is a Plateau?",
       answers: {
-        a: "Sepoys",
-        b: "Redcoats",
-        c: "Yankees"
+        a: "A flat elevated area of land",
+        b: "Full of rivers with deep cresting valleys",
+        c: "Grassy with lush vegetation and lots of trees and arable farmland"
       },
       correctAnswer: "a"
     },
     {
-      question: "Civil rights leader in India...",
+      question: "What is the Name of the soil carried by the yellow/yangtze river",
       answers: {
-        a: "Nelson Mandela",
-        b: "Martin Luther King Jr.",
-        c: "Mohandas Gandhi"
-      },
-      correctAnswer: "c"
-    },
-    {
-      question: "What was the company that imperialized India?",
-      answers: {
-        a: "British West India Company",
-        b: "British East India Company",
-        c: "British North India Company"
+        a: "Dirt",
+        b: "Loess",
+        c: "Silt"
       },
       correctAnswer: "b"
+    },
+    {
+      question: "North and south China are part of the...",
+      answers: {
+        a: "mainland",
+        b: "heartland",
+        c: "midwest"
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "Deserts are...",
+      answers: {
+        a: "Volatile in temperature, sandy, dry, and windy. Deserts are also rich in oil.",
+        b: "Always hot year-round, no matter the season",
+        c: "Places with some arable farmland"
+      },
+      correctAnswer: "a"
+    },
+    {
+      question: "What is the Name of the Dam along the Huang He river?",
+      answers: {
+        a: "Three Gorges Dam",
+        b: "People's dam of china",
+        c: "Mao Zedong Dam"
+      },
+      correctAnswer: "a"
     }
   ];
 
