@@ -459,28 +459,21 @@ button {
   height: 200px;
 }
 
-/*
-.mathbutton{
-  position: left;
-  height: 100px;
+.mathbutton {
+  background-color: red;
 }
-.sciencebutton{
-  position: right;
-  height: 100px;
-}
-.elabutton {
-  position: bottom-left;
-  height: 100px;
-  margin-top: -40px;
-}
-.ssbutton {
-  position: bottom-right;
-  height: 100px;
-  margin-top: -40px;
-  text-align: center;
-}
-  */
 
+.sciencebutton {
+  background-color: green;
+}
+
+.elabutton {
+  background-color: blue;
+}
+
+.ssbutton {
+  background-color: purple;
+}
 
 button:hover {
  cursor: pointer;
@@ -582,9 +575,11 @@ h6 {
   font-family: 'Bebas Neue';
   font-size: 30px;
   border: 1px solid white;
+  background-color: white;
 }
 .answers label{
   display: block;
+  background-color: white;
 }
 
 #submit {
