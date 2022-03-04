@@ -648,3 +648,44 @@ h6 {
     font-size: 20px
   }
 }
+
+.stats {
+  font-family: 'Bebas Neue';
+}
+
+.users {
+  background-color: white;
+  outline: 5px solid black;
+  width: 30%;
+}
+
+.quizzes {
+  background-color: white;
+  outline: 5px solid black;
+  width: 30%;
+}
+
+.created {
+  background-color: white;
+  outline: 5px solid black;
+  width: 30%;
+}
+
+.stats h1, p {
+  background-color: white;
+}
+
+.stats div {
+  display: inline-block;
+  text-align: center;
+}
+
+.stats p {
+  font-size: 60px;
+}
+
+@media only screen and (max-width: 600px) {
+  .stats div {
+    width: 100%;
+  }
+}
