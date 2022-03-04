@@ -156,7 +156,7 @@
       correctAnswer: "a"
     },
     {
-      question: "What is the Name of the Dam along the Huang He river?",
+      question: "What is the Name of the Dam along the Yangtze river?",
       answers: {
         a: "Three Gorges Dam",
         b: "People's dam of china",

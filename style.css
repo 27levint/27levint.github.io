@@ -24,7 +24,7 @@ i {
   text-align: center;
   padding: space-evenly;
   text-decoration: none;
-  font-size: 60px;
+  font-size: 30px;
   background-color: white;
   font-family: 'Bebas Neue';
 }
@@ -417,7 +417,7 @@ z-index: +1;
 }
 
 h {
-  font-size: 200%;
+  font-size: 190%;
   z-index: +1;
 }
 
@@ -615,7 +615,7 @@ h6 {
   }
 
   .answers {
-    font-size: 10px;
+    font-size: 15px;
   }
 }
 
@@ -642,4 +642,9 @@ h6 {
 
 .plus {
   margin-top: -50px;
+}
+@media only screen and (max-width: 600px) {
+  .ssbutton a {
+    font-size: 20px
+  }
 }
