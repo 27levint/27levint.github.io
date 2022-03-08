@@ -5,11 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Study+</title>
-    <link href="style.css" rel="stylesheet"> 
+    <link href="studyplus.css" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- <!--font(s)-->
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -18,69 +15,39 @@
 <link rel="manifest" href="/site.webmanifest">
   </head>
   <body>
-    <div class="topnav" id="myTopnav">
-  <a href="index.html" class="active">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="todo.html">To-Do list</a>
-  <a href="submaquiz.html">Submit A Quiz</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
-
-    <div class="titlebanner">
-      <h>Study+</h>
-      <h6> Study for all your core classes, all in one place.</h6>
+   <div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      <a href="">Study+</a>
     </div>
-    <hr />
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  
+  <div class="nav-links">
+    <a href="">About Us</a>
+    <a href="">To-Do List</a>
+    <a href="">Make a Quiz</a>
+    <a href="">Do the Wordle</a>
+  </div>
+</div>
     <div class="study">
-      <h2>What do you want to study?</h2>
-        
-
-      <!--I am going to reorganize the study section with css grids, and add icons etc. Also, I got the animations to work but need to fine tune them
-        k sounds good  -->
-
-<div class="grid">
-  <div class="mathbutton">
-    <a href="math.html">Math <br> <span class="flag">➗</span></a>
-  </div>
-  <div class="sciencebutton">
-    <a href="science.html">Science <br> <span class="flag">🧬</span></a>
-  </div>
-  <div class="elabutton">
-    <a href="ela.html">ELA <br> <span class="flag">📝</span></a>
-  </div>
-  <div class="ssbutton">
-    <a href="ss.html">Social Studies <br> <span class="flag">🗺</span></a>
-  </div>
-  <div class="mathbutton">
-    <a href="spanish.html">Spanish <br> <span class="flag">🇪🇸</span></a>
-  </div>
-  <div class="mathbutton">
-    <a href="french.html">French <br> <span class="flag">🇫🇷</span></a>
-  </div>
-</div>
-</div>
-
-<div class="stats">
-  <center>
-  <div class="users">
-    <h1>🧑‍💻</h1>
-    <h1>Users</h1>
-    <p>10+</p>
-  </div>
-  <div class="quizzes">
-    <h1>📑</h1>
-    <h1>Quizzes</h1>
-    <p>5+</p>
-  </div>
-  <div class="created">
-    <h1>📓</h1>
-    <h1>Subjects</h1>
-    <p>6+</p>
-  </div>
-  </center>
-</div>
-
+    <br>
+    <h1>Welcome to Study+</h1>
+    <h2>The Best Site for Helping MMS Students Study</h2>
+      <hr />
+      <h2>Helping students since 2022.</h2>
+      <h2>Get Learning:</h2>
+      <br><br>
+      <a href="menu.html"><button id="submit">Start Now</button></a>
+      <br>
+      <h2>More Info</h2>
+      <h3>Study+ is an interactive studying website to help students do well on their tests. Using two different quiz modes, students can practice in as few as 10 questions. Find tests for your team and teacher. Study+ currently has 6 subjects, Math ELA, Science, Social Studies, Spanish, and French. Students can also make practice quizzes on their own, and submit them. The best quizzes will be adapted into a Study+ quiz for all to see.</h3>
   </body>
 </html>

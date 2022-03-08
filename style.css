@@ -1,3 +1,84 @@
+.navbar {
+  font-size: 18px;
+  background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+.nav-links,
+.logo {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.logo {
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+
+.active {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
+    align-items: center;
+  }
+
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  .main-nav li {
+    margin: 0;
+  }
+
+  .nav-links {
+    margin-left: 40px;
+  }
+
+  .logo {
+    margin-top: 0;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .logo:hover,
+  .nav-links:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
 * {
   margin: 10px;
   border: 10px;
@@ -10,39 +91,6 @@
 i {
   background-color: white;
 }
-
-.topnav {
-  overflow: hidden;
-  background-color: white;
-  z-index: +1;
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: rgb(54, 54, 56);
-  text-align: center;
-  padding: space-evenly;
-  text-decoration: none;
-  font-size: 30px;
-  background-color: white;
-  font-family: 'Bebas Neue';
-}
-
-.topnav a:hover, i:hover {
-  background-color: deepskyblue;
-  color: black;
-}
-
-.topnav a:active {
-  background-color: deepskyblue;
-  color: white;
-}
-
-.topnav .icon {
-  display: none;
-}
-
 
 @viewport {
   width: device-width;
@@ -684,8 +732,15 @@ h6 {
   font-size: 60px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
   .stats div {
-    width: 100%;
+    width: 90%;
   }
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  border: none;
+  background-color: white;
 }

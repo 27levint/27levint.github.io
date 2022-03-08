@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="studyplus.css">
-  <title>Submit A Quiz</title>
+  <title>Contact Us</title>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <!--font(s)-->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,6 +63,60 @@
     .study {
       margin-top: -20px;
     }
+    .pulse {
+  position: fixed!important;
+  bottom: 0%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  background: #225899;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  color: #fff;
+  text-align: center;
+  line-height: 55px;
+  font-size: 40px;
+    z-index:1;
+}
+
+.pulse:before,
+.pulse:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    border: 50%;
+    border: 1px solid #225899;
+    left: -20px;
+    right: -20px;
+    top: -20px;
+    bottom: -20px;
+    border-radius: 50%;
+    animation: animate 1.5s linear infinite;
+    opacity: 0;
+    backface-visibility: hidden; 
+}
+
+.pulse:after{
+    animation-delay: .5s;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
   </style>
   </head>
   <body>
@@ -90,8 +144,8 @@
 </div>
     <div class="study">
       <br>
-      <h1>Make A Quiz</h1>
-  <h2 class="h2">Here you can submit requests to get quizzes for your own classes, in any grade, on any team</h2>
+      <h1>Contact Us</h1>
+  <h2 class="h2">Get in touch with a member of our team</h2>
       <br>
     <form action="mailto:27murphyl@millburn.org,27levint@millburn.org" method="post" enctype="text/plain" target="__blank">
       <div class="questions">
@@ -105,63 +159,8 @@
         </label>
       </div>
       <div class="questions">
-        <label for="email">Subject Quiz is For:
+        <label for="email">Your Issue:
           <input type="text" name="subject" id="subject" />
-        </label>
-      </div>
-      <br>
-      <div class="questions">
-        <label for="email">Question 1:
-          <input type="text" name="question 1" id="question 1" />
-        </label>
-      </div>
-      <div class="questions">
-        <label for="email">Correct Answer:
-          <input type="text" name="answer" id="answer" />
-        </label>
-      </div>
-      <br>
-      <div class="questions">
-        <label for="email">Question 2:
-          <input type="text" name="question 2" id="question 2" />
-        </label>
-      </div>
-      <div class="questions">
-        <label for="email">Correct Answer:
-          <input type="text" name="answer" id="answer" />
-        </label>
-      </div>
-      <br>
-      <div class="questions">
-        <label for="email">Question 3:
-          <input type="text" name="question 3" id="question 3" />
-        </label>
-      </div>
-      <div class="questions">
-        <label for="email">Correct Answer:
-          <input type="text" name="answer" id="answer" />
-        </label>
-      </div>
-      <br>
-      <div class="questions">
-        <label for="email">Question 4:
-          <input type="text" name="question 4" id="question 4" />
-        </label>
-      </div>
-      <div class="questions">
-        <label for="email">Correct Answer:
-          <input type="text" name="answer" id="answer" />
-        </label>
-      </div>
-      <br>
-      <div class="questions">
-        <label for="email">Question 5:
-          <input type="text" name="question 5" id="question 5" />
-        </label>
-      </div>
-      <div class="questions">
-        <label for="email">Correct Answer:
-          <input type="text" name="answer" id="answer" />
         </label>
       </div>
       <br>
@@ -174,5 +173,13 @@
       </div>
     </form>
   </div>
+    <a uk-toggle class="" href="#modalmt" uk-scroll=""><div class="pulse uk-margin-auto uk-text-center"><span uk-icon="icon: receiver;ratio:2" class="uk-icon"></span></div></a>
+
+<div id="modalmt" class="" uk-modal="">
+   <div class="uk-text-center uk-width-large uk-modal-dialog uk-modal-body">
+    <h3 class="uk-h4">Title</h3>
+    Your content here
+        </div>
+</div>
 </body>
 </html>

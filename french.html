@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Study French</title>
-    <link href="style.css" rel="stylesheet"> <div></div>
+    <link href="studyplus.css" rel="stylesheet"> <div></div>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  
  <!--font(s)-->
@@ -20,23 +20,35 @@
  
   </head>
   <body>
-    <div class="topnav" id="myTopnav">
-  <a href="index.html" class="active">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="todo.html">To-Do</a>
-  <a href="submaquiz.html">Submit A Quiz</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
+    <div class="nav">
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      <a href="menu.html">Study+</a>
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+  
+  <div class="nav-links">
+    <a href="about.html">About Us</a>
+    <a href="todo.html">To-Do List</a>
+    <a href="submaquiz.html">Make a Quiz</a>
+    <a href="wordle.html">Do the Wordle</a>
+  </div>
 </div>
 
-    <div class="titlebanner">
-      <h style="font-size: 100px">French</h>
-      <h6>Study for upcoming French assessments</h6>
+    <div class="study">
+      <br>
+      <h1>French</h1>
+      <h2>Study for upcoming French assessments</h2>
+      <i>There are no available tests for French. Please submit a quiz to begin this page.</i>
     </div>
-    <hr />
-    <h6>There are no study guides available for French. Please click 'Submit a Quiz' and start this page!</h6>
-    <!--<button class="studyguide"><a href="vanbruntastronomy.html">VanBrunt <br> Astronomy Unit</a></button>-->
 <script src=script.js></script>
 </body>
 </html>

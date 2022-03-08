@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo&family=Nunito&family=Source+Sans+Pro&family=Work+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: white;
+}
+
+.nav {
+  height: 75px;
+  width: 100%;
+  background-color: deepskyblue;
+  position: relative;
+  border-bottom: 1px solid black;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 50px;
+  color: black;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 40px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 50px;
+  text-decoration: none;
+  color: black;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: white;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:1200px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 15px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 75px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid black;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: white;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 75px;
+    left: 0px;
+    border-top: 1px solid black;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+    font-size: 25px;
+    padding: 13px 10px 13px 10px;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  .nav > .nav-links > a:hover {
+    background-color: deepskyblue;
+  }
+}
+
+.study {
+  text-align: center;
+  background-color: white;
+  height: 800px;
+}
+
+.subject {
+  width: 200px;
+  border-radius: 50%;
+  border: 5px solid deepskyblue;
+  height: 200px;
+  margin-bottom: 20px;
+  background-color: lightgreen;
+  color: black;
+  font-size: 80px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .subject {
+    width: 100px;
+    height: 100px;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+  }
+  .subject:hover {
+    font-size: 30px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  .study {
+    height: 475px;
+  }
+}
+
+h4 {
+  font-size: 20px;
+  margin-top: -10px;
+}
+
+table {
+  text-align: center;
+}
+
+.subject:hover {
+  cursor: pointer;
+  border-radius: 25%;
+}
+
+@media only screen and (min-width: 600px) {
+  .ss {
+    display: none;
+  }
+}
+
+::selection {
+  background-color: deepskyblue;
+}
+
+footer {
+  background-color: black;
+  text-align: center;
+  color: white;
+  margin-top: -16px;
+}
+
+.titlebanner {
+  background-color: white;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#myInput {
+  background-color: white;
+  border: 1px solid silver;
+  width: 300px;
+  z-index: +1;
+  font-size: 2rem;
+  height: 50px;
+}
+
+.addBtn {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-family: 'Bebas Neue';
+  z-index: +1;
+  font-size: 2rem;
+  height: 50px;
+  border: 1px solid black;
+  width: 100px;
+  margin-left: -3.5px;
+}
+
+ul {
+  list-style: none;
+  font-family: "Bebas Neue";
+  font-size: 30px;
+
+}
+
+.close {
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+  cursor: pointer;
+}
+
+.header {
+  background-color: white;
+}
+
+ul li.checked {
+  text-decoration: line-through;
+}
+
+.hide {
+  color: black;
+  font-size: 10px;
+  background-color: black;
+}
+
+@media screen and (max-width: 600px) {
+  #myInput {
+    width: 200px;
+  }
+}
+
+.studyguide {
+  width: 80%;
+  height: 200px;
+  font-size: 2rem;
+  background-color: deepskyblue;
+  font-family: 'Source Sans Pro';
+  border: 1px solid black;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.studyguide:hover {
+  cursor: pointer;
+}
+
+.question{
+	font-weight: 600;
+  font-family: 'Source Sans Pro';
+  font-size: 40px;
+  border: 1px solid white;
+  background-color: white;
+  border-bottom: 10px solid white;
+}
+.answers {
+  font-family: 'Source Sans Pro';
+  font-size: 30px;
+  border: 1px solid white;
+  background-color: white;
+  border-bottom: 100px solid white;
+  text-align: left;
+  border-left: 10px solid white;
+}
+.answers label{
+  display: block;
+  background-color: white;
+}
+
+#submit {
+  appearance: button;
+      background-color: deepskyblue;
+      border: solid transparent;
+      border-radius: 16px;
+      border-width: 0 0 4px;
+      box-sizing: border-box;
+      color: white;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: .8px;
+      line-height: 10px;
+      margin: 0;
+      outline: none;
+      overflow: visible;
+      padding: 13px 16px;
+      text-align: center;
+      text-transform: uppercase;
+      touch-action: manipulation;
+      transform: translateZ(0);
+      transition: filter .2s;
+      user-select: none;
+      -webkit-user-select: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      width: 50%;
+      margin-top: -70px;
+}
+
+#results {
+  font-family: 'Source Sans Pro';
+  font-size: 20px;
+  background-color: white;
+}
+
+.buttondiv {
+  background-color: white;
+}
+
+.br {
+  background-color: white;
+  height: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .answers {
+    font-size: 13px;
+    margin-left: 1px;
+  }
+  .question {
+    font-size: 20px;
+  }
+}
