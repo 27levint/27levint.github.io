@@ -66,7 +66,7 @@
     .pulse {
   position: fixed!important;
   bottom: 0%;
-  left: 85%;
+  left: 90%;
   transform: translate(-50%, -50%);
   background: #225899;
   border-radius: 5px;
@@ -74,48 +74,9 @@
   height: 50px;
   color: #fff;
   text-align: center;
-  line-height: 55px;
+  line-height: 50px;
   font-size: 20px;
     z-index:1;
-}
-
-.pulse:before,
-.pulse:after {
-    content: " ";
-    display: block;
-    position: absolute;
-    border: 50%;
-    border: 1px solid #225899;
-    left: -20px;
-    right: -20px;
-    top: -20px;
-    bottom: -20px;
-    border-radius: 50%;
-    animation: animate 1.5s linear infinite;
-    opacity: 0;
-    backface-visibility: hidden; 
-}
-
-.pulse:after{
-    animation-delay: .5s;
-}
-
-@keyframes animate
-{
-    0%
-    {
-        transform: scale(0.5);
-        opacity: 0;
-    }
-    50%
-    {
-        opacity: 1;
-    }
-    100%
-    {
-        transform: scale(1.2);
-        opacity: 0;
-    }
 }
   </style>
   </head>
@@ -150,16 +111,19 @@
     <form action="mailto:27murphyl@millburn.org,27levint@millburn.org" method="post" enctype="text/plain" target="__blank">
       <div class="questions">
         <label for="name"> Your Name:
+          <br>
           <input type="text" name="name" id="name" />
         </label>
       </div>
       <div class="questions">
         <label for="email">Your Team:
+          <br>
           <input type="text" name="team" id="team" />
         </label>
       </div>
       <div class="questions">
         <label for="email">Your Issue:
+          <br>
           <input type="text" name="subject" id="subject" />
         </label>
       </div>
@@ -173,7 +137,6 @@
       </div>
     </form>
   </div>
-    <a uk-toggle class="" href="contact.html" uk-scroll=""><div class="pulse uk-margin-auto uk-text-center"><span uk-icon="icon: receiver;ratio:2" class="uk-icon"></span>Contact Us</div></a>
 </div>
 </body>
 </html>

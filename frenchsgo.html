@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width initial-scale=1"><div></div>
+    <meta name="viewport" content="width=device-width initial-scale=1">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Study Social Studies</title>
-    <link href="studyplus.css" rel="stylesheet"> <div></div>
+    <title>Study French</title>
+    <link href="studyplus.css" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  
  <!--font(s)-->
@@ -17,7 +17,11 @@
 <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
 <link rel="manifest" href="/site.webmanifest">
- 
+<style>
+  .study {
+    margin-top: -20px;
+  }
+</style>
   </head>
   <body>
     <div class="nav">
@@ -42,15 +46,18 @@
     <a href="wordle.html">Do the Wordle</a>
   </div>
 </div>
-
+    
     <div class="study">
       <br>
-      <h1>Social Studies</h1>
-      <h2>Study for upcoming Social Studies assessments</h2>
-      <a href="wenchinageo.html"><button class="studyguide">Wen <br> China's Geography Unit</button></a>
-    <a href="wenindia.html"><button class="studyguide">Wen <br> India Unit</button></a>
+      <h1>French</h1>
+      <h2>SGO Study Guide</h2>
+      <div id="results"></div>
+      <br>
+    <div id="quiz"></div>
+<div class="buttondiv"><button id="submit">Submit Quiz</button></div>
+      <div class="br"></div>
+      <div class="br"></div>
     </div>
     <a uk-toggle class="" href="contact.html" uk-scroll=""><div class="pulse uk-margin-auto uk-text-center"><span uk-icon="icon: receiver;ratio:2" class="uk-icon"></span>Contact Us</div></a>
-<script src=script.js></script>
+<script src="frenchsgo.js"></script>
 </body>
-</html>
