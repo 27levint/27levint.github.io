@@ -177,6 +177,36 @@
         d: "Makemake and Eris"
       },
       correctAnswer: "d"
+    },
+    {
+      question: "When is the Summer Solstice?",
+      answers: {
+        a: "March 21",
+        b: "June 21",
+        c: "September 21",
+        d: "December 21"
+      },
+      correctAnswer: "b"
+    },
+    {
+      question: "When is the Winter Solstice?",
+      answers: {
+        a: "March 21",
+        b: "June 21",
+        c: "September 21",
+        d: "December 21"
+      },
+      correctAnswer: "d"
+    },
+    {
+      question: "What is it called when the Moon crosses in between the Sun and the Earth?",
+      answers: {
+        a: "Eclipse",
+        b: "Winter Eclipse",
+        c: "Solar Eclipse",
+        d: "Night Eclipse"
+      },
+      correctAnswer: "c"
     }
   ];
 
