@@ -13,6 +13,26 @@
 <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
 <link rel="manifest" href="/site.webmanifest">
+  <style>
+    .study {
+      background-image: url("studybackground.gif");
+    }
+    .submit {
+      margin-bottom: 5px;
+      border: 1px solid black;
+      width: 80%;
+      background-color: black;
+      height: 40px;
+      color: white;
+      border-radius: 10px;
+      font-size: 20px;
+      font-family: 'Source Sans Pro';
+      cursor: pointer;
+    }
+    .submit:hover {
+      background-color: deepskyblue;
+    }
+  </style>
 </head>
 <body>
 <div class="nav">
@@ -39,42 +59,19 @@
 </div>
   <div class="study">
     <br>
-    <h1>What Do You Want To Study?</h1>
+    <h1 style="margin-top: -10px">What Do You Want To Study?</h1>
     <center>
-  <table>
-        <tr>
-          <td>
-            <a href="math.html"><button class="subject">➗</button></a>
-          </td>
-          <td>
-            <a href="ela.html"><button class="subject">📚</button></a>
-          </td>
-          <td>
-            <a href="science.html"><button class="subject">🧪</button></a>
-          </td>
-          <tr>
-          <td><h4>Math</h4></td>
-          <td><h4>ELA</h4></td>
-          <td><h4>Science</h4></td>
-          </tr>
-  </table>
-  <table>
-          <td>
-            <a href="ss.html"><button class="subject">🗺</button></a>
-          </td>
-          <td>
-            <a href="spanish.html"><button class="subject">🇪🇸</button></a>
-          </td>
-          <td>
-            <a href="french.html"><button class="subject">🇫🇷</button></a>
-          </td>
-        </tr>
-        <tr>
-          <td><h4>Social <br class="ss">Studies</h4></td>
-          <td><h4>Spanish</h4></td>
-          <td><h4>French</h4></td>
-        </tr>
-      </table>
+  <a href="math.html"><button class="submit">Math</button></a>
+      <br><br>
+      <a href="science.html"><button class="submit">Science</button></a>
+      <br><br>
+      <a href="ela.html"><button class="submit">ELA</button></a>
+      <br><br>
+      <a href="ss.html"><button class="submit">Social Studies</button></a>
+      <br><br>
+      <a href="spanish.html"><button class="submit">Spanish</button></a>
+      <br><br>
+      <a href="french.html"><button class="submit">French</button></a>
           
             </div>
   <a uk-toggle class="" href="contact.html" uk-scroll=""><div class="pulse uk-margin-auto uk-text-center"><span uk-icon="icon: receiver;ratio:2" class="uk-icon"></span>Contact Us</div></a>

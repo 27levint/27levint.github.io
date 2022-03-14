@@ -122,6 +122,7 @@ body {
   color: black;
   font-size: 80px;
   text-align: center;
+  transition: all 3 ease-in;
 }
 
 h1 {
@@ -212,9 +213,17 @@ a {
 
 ul {
   list-style: none;
-  font-family: "Bebas Neue";
+  font-family: "Source Sans Pro";
   font-size: 30px;
+  border: 1px solid black;
+  width: 80%;
+  text-align: left;
+  background-color: white;
+}
 
+ul:hover {
+  background-color: deepskyblue;
+  cursor: pointer;
 }
 
 .close {
@@ -352,3 +361,32 @@ ul li.checked {
   font-size: 20px;
   z-index:1;
 }
+
+.container {
+  position: relative;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.text-block {
+  position: absolute;
+  bottom: 20%;
+  right: 20px;
+  background-color: white;
+  color: black;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 70%;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.text-block h4 {
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .text-block {
+    height: 150px;
+    width: 91%;
+  }
