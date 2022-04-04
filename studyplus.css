@@ -254,14 +254,15 @@ ul li.checked {
 }
 
 .studyguide {
-  width: 80%;
-  height: 200px;
-  font-size: 2rem;
+  width: 60%;
+  height: 120px;
+  font-size: 3vw;
   background-color: deepskyblue;
   font-family: 'Source Sans Pro';
-  border: 1px solid black;
+  border: none;
   color: black;
   margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 .studyguide:hover {

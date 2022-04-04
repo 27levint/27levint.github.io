@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>China's History (Part One) - Study Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <style>
+   @import url('https://fonts.googleapis.com/css2?family=Archivo&family=Nunito&family=Source+Sans+Pro&family=Work+Sans&display=swap');
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    background-color: white;
+}
+   
+body{
+    font-family: 'Source Sans Pro';
+
+}
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: deepskyblue;
+    background: url('../assets/background_image.jpg');
+    background-color : white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.game-quiz-container{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 30px;
+}
+
+.game-details-container{
+    width: 80%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.game-details-container h1{
+    font-size: 2rem;
+}
+
+.game-question-container{
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+
+.game-question-container h1{
+    font-size: 2rem;
+    text-align: center;
+    padding: 3px;
+}
+
+.game-options-container{
+    width: 80%;
+    height: 12rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.game-options-container span{
+    width: 45%;
+    height: 3rem;
+    border: 2px solid darkgray;
+    border-radius: 20px;
+    overflow: hidden;
+}
+span label{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    font-weight: 600;
+    color: rgb(22, 22, 22);
+    font-size: 20px;
+}
+
+span label:hover{
+    -ms-transform: scale(1.12);
+    -webkit-transform: scale(1.12);
+    transform: scale(1.12);
+    color: darkslategray;
+}
+
+input[type="radio"] {
+    position: relative;
+    display: none;
+}
+
+
+input[type=radio]:checked ~ .option {
+    background: deepskyblue;
+}
+
+.close {
+  appearance: button;
+  background-color: white;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Source Sans Pro';
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: -40px;
+}
+   
+.next-button-container{
+    width: 50%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+}
+.next-button-container button{
+  appearance: button;
+  background-color: deepskyblue;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Source Sans Pro';
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 90%;
+  bottom: 10px;
+  position: fixed;
+}
+.next-button-container button:hover{
+    filter: brightness(1.1);
+}
+
+.modal-container{
+    display: none;
+    position: fixed;
+    z-menu: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    -webkit-animation: fadeIn 1.2s ease-in-out;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.modal-content-container{
+    height: 20rem;
+    width: 25rem;
+    background-color: rgb(43, 42, 42);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 25px;
+}
+
+.modal-content-container h1{
+    font-size: 1rem;
+    height: 3rem;
+    color: lightgray;
+    text-align: center;
+}
+
+.grade-details{
+    width: 15rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.grade-details p{
+    color: white;
+    text-align: center;
+}
+
+.modal-button-container{
+    height: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-button-container button{
+    width: 10rem;
+    height: 2rem;
+    background: none;
+    outline: none;
+    border: 1px solid rgb(252, 242, 241);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.modal-button-container button:hover{
+    background-color: rgb(83, 82, 82);
+}
+
+@media(min-width : 300px) and (max-width : 350px){
+    .game-quiz-container{
+        width: 90%;
+        height: 80vh;
+     }
+     .game-details-container h1{
+        font-size: 1.5rem;
+     }
+
+     .game-question-container{
+        height: 6rem;
+     }
+     .game-question-container h1{
+       font-size: 1.6rem;
+    }
+
+    .game-options-container span{
+        width: 90%;
+        height: 2.5rem;
+    }
+    .game-options-container span label{
+        font-size: 1.5rem;
+    }
+    .modal-content-container{
+        width: 90%;
+        height: 25rem;
+    }
+
+    .modal-content-container h1{
+        font-size: 2rem;
+    }
+}
+
+@media(min-width : 350px) and (max-width : 700px){
+   .game-quiz-container{
+       width: 90%;
+       height: 80vh;
+    }
+    .game-details-container h1{
+        font-size: 1.5rem;
+    }
+
+    .game-question-container{
+        height: 8rem;
+    }
+
+    .game-question-container h1{
+        font-size: 2rem;
+     }
+
+    .game-options-container span{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .modal-content-container{
+        width: 100%;
+        height: 25rem;
+    }
+    .modal-content-container h1{
+        font-size: 20px;
+    }
+   .next-button-container {
+     width: 90%;
+   }
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+ </style>
+ <!--font(s)-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="manifest" href="/site.webmanifest">
+ 
+  </head>
+<body onload="NextQuestion(0)">
+    <main>
+        
+        <div class="modal-container" id="score-modal">
+
+            <div class="modal-content-container">
+
+                <h1 style="font-size: 20px">Congratulations, Quiz Completed.</h1>
+
+                <div class="grade-details">
+                    <p>Attempts : 10</p>
+                    <p>Wrong Answers : <span id="wrong-answers"></span></p>
+                    <p>Right Answers : <span id="right-answers"></span></p>
+                    <p>Grade : <span id="grade-percentage"></span>%</p>
+                    <p ><span id="remarks"></span></p>
+                </div>
+
+                <div class="modal-button-container">
+                    <button onclick="closeScoreModal()">Continue</button>
+                </div>
+                <div class="modal-button-container">
+                    <button><a href="menu.html">Home</a></button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="game-quiz-container">
+
+            <div class="game-details-container">
+                <h1>Score : <span id="player-score"></span> / 10</h1>
+              <br class="small">
+                <h1> Question : <span id="question-number"></span> / 10</h1>
+            </div>
+            <div class="game-question-container">
+                <h1 id="display-question"></h1>
+            </div>
+
+            <div class="game-options-container">
+
+               <div class="modal-container" id="option-modal">
+
+                    <div class="modal-content-container">
+                         <h1>Please Pick An Option</h1>
+
+                         <div class="modal-button-container">
+                            <button onclick="closeOptionModal()">Continue</button>
+                        </div>
+
+                    </div>
+
+               </div>
+
+                <span>
+                    <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
+                    <label for="option-one" class="option" id="option-one-label"></label>
+                </span>
+
+
+                <span>
+                    <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
+                    <label for="option-two" class="option" id="option-two-label"></label>
+                </span>
+
+
+                <span>
+                    <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+                    <label for="option-three" class="option" id="option-three-label"></label>
+                </span>
+
+
+                <span>
+                    <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
+                    <label for="option-four" class="option" id="option-four-label"></label>
+                </span>
+
+
+            </div>
+
+            <div class="next-button-container">
+                <button onclick="handleNextQuestion()">Next Question</button>
+            </div>
+
+        </div>
+    </main>
+    <script>
+      const questions = [
+    {
+        question: "Who can become emperor?",
+        optionA: "The poor",
+        optionB: "Anyone",
+        optionC: "Gentry",
+        optionD: "The rich",
+        correctOption: "optionB"
+    },
+
+    {
+        question: "What is the term limit for an emperor?",
+        optionA: "A decade",
+        optionB: "4 years",
+        optionC: "♾",
+        optionD: "20 years",
+        correctOption: "optionC"
+    },
+
+    {
+        question: "What happens when a dynasty ends?",
+        optionA: "A new one begins",
+        optionB: "Famine occurs",
+        optionC: "Natural disasters occur",
+        optionD: "The peasants revolt",
+        correctOption: "optionA"
+    },
+
+    {
+        question: "Authority",
+        optionA: "Being a ruler",
+        optionB: "Winning",
+        optionC: "Power",
+        optionD: "Being an author",
+        correctOption: "optionC"
+    },
+
+    {
+        question: "Divine",
+        optionA: "Godlike",
+        optionB: "Seeing the future",
+        optionC: "Being an oracle",
+        optionD: "Being a ruler",
+        correctOption: "optionA"
+    },
+
+    {
+        question: "Modest",
+        optionA: "Unordinary",
+        optionB: "Common",
+        optionC: "Peasant",
+        optionD: "Being rich",
+        correctOption: "optionB"
+    },
+
+    {
+        question: "The Mandate of Heaven was created by the ___ dynasty",
+        optionA: "Han",
+        optionB: "Qin",
+        optionC: "Zhou",
+        optionD: "Shang",
+        correctOption: "optionC"
+    },
+
+    {
+        question: "This dynasty created oracle bones",
+        optionA: "Han",
+        optionB: "Qin",
+        optionC: "Zhou",
+        optionD: "Shang",
+        correctOption: "optionD"
+    },
+
+    {
+        question: "The ancient Chinese bought ___ to please their ancestors",
+        optionA: "Silver vessels",
+        optionB: "Bronze vessels",
+        optionC: "Gold vessels",
+        optionD: "Jade vessels",
+        correctOption: "optionB"
+    },
+
+    {
+        question: "The ancient Chinese furnished ___ to please their ancestors",
+        optionA: "Brothers",
+        optionB: "Coffins",
+        optionC: "The pyramids",
+        optionD: "The tombs",
+        correctOption: "optionD"
+    },
+
+    {
+        question: "The Zhou dynasty lasted for ___ years",
+        optionA: "15",
+        optionB: "400",
+        optionC: "800",
+        optionD: "1000",
+        correctOption: "optionC"
+    },
+
+    {
+        question: "Avoid what is strong. Attack what is weak.",
+        optionA: "Sun Tzu",
+        optionB: "Daoism",
+        optionC: "Legalism",
+        optionD: "Confucianism",
+        correctOption: "optionA"
+    },
+
+
+    {
+        question: "Who created Legalism?",
+        optionA: "Laozi",
+        optionB: "Han Feizi",
+        optionC: "Sun Tzu",
+        optionD: "Kong Fuzi",
+        correctOption: "optionB"
+    },
+
+    {
+        question: "Which dynasty was influenced by Daoism and Confucianism?",
+        optionA: "Shang",
+        optionB: "Qin",
+        optionC: "Zhou",
+        optionD: "Han",
+        correctOption: "optionD"
+    },
+
+    {
+        question: "Which dynasty used Legalism?",
+        optionA: "Qin",
+        optionB: "Zhou",
+        optionC: "Han",
+        optionD: "Shang",
+        correctOption: "optionA"
+    },
+
+    {
+        question: "How old was Chao Cheng when he conquered the Zhou dynasty?",
+        optionA: "12",
+        optionB: "13",
+        optionC: "10",
+        optionD: "11",
+        correctOption: "optionB"
+    },
+
+    {
+        question: "The Qin empire started building...",
+        optionA: "The Great Wall of China",
+        optionB: "The Grand Canal",
+        optionC: "Mongolia",
+        optionD: "The Three Gorges Dam",
+        correctOption: "optionA"
+    },
+
+    {
+        question: "Who was the first emperor of the Qin dynasty?",
+        optionA: "Laozi",
+        optionB: "Kong Fuzi",
+        optionC: "Shi Huangdi",
+        optionD: "Sun Tzu",
+        correctOption: "optionC"
+    },
+
+    {
+        question: "Who did Shi Huangdi's policies affect most?",
+        optionA: "Artisans",
+        optionB: "Merchants",
+        optionC: "Peasants",
+        optionD: "Gentry",
+        correctOption: "optionC"
+    },
+
+    {
+        question: "Who started the Han dynasty?",
+        optionA: "Liu Bang",
+        optionB: "Kong Fuzi",
+        optionC: "Shi Huangdi",
+        optionD: "Chinggis Khan",
+        correctOption: "optionA"
+    },
+
+    {
+        question: "What were Han government officials called?",
+        optionA: "Oranges",
+        optionB: "Apples",
+        optionC: "Tax Collectors",
+        optionD: "Mandarins",
+        correctOption: "optionD"
+    },
+
+    {
+        question: "What idea spread along the Silk Road?",
+        optionA: "Catholicism",
+        optionB: "Buddhism",
+        optionC: "Judiasm",
+        optionD: "Sikkhism",
+        correctOption: "optionB"
+    },
+
+    {
+        question: "Which class was the wealthiest?",
+        optionA: "Merchants",
+        optionB: "Peasants",
+        optionC: "Gentry/Aristocrats",
+        optionD: "Artisans",
+        correctOption: "optionC"
+    },
+
+    {
+        question: "Could artisans work for the government?",
+        optionA: "Yes",
+        optionB: "No",
+        optionC: "Maybe",
+        optionD: "So",
+        correctOption: "optionA"
+    },
+
+    {
+        question: "Merchants included bankers",
+        optionA: "Yes",
+        optionB: "No",
+        optionC: "Maybe",
+        optionD: "So",
+        correctOption: "optionA"
+    }
+
+]
+
+
+let shuffledQuestions = [] //empty array to hold shuffled selected questions out of all available questions
+
+function handleQuestions() { 
+    //function to shuffle and push 10 questions to shuffledQuestions array
+//app would be dealing with 10questions per session
+    while (shuffledQuestions.length <= 9) {
+        const random = questions[Math.floor(Math.random() * questions.length)]
+        if (!shuffledQuestions.includes(random)) {
+            shuffledQuestions.push(random)
+        }
+    }
+}
+
+
+let questionNumber = 1 //holds the current question number
+let playerScore = 0  //holds the player score
+let wrongAttempt = 0 //amount of wrong answers picked by player
+let menuNumber = 0 //will be used in displaying next question
+
+// function for displaying next question in the array to dom
+//also handles displaying players and quiz information to dom
+function NextQuestion(menu) {
+    handleQuestions()
+    const currentQuestion = shuffledQuestions[menu]
+    document.getElementById("question-number").innerHTML = questionNumber
+    document.getElementById("player-score").innerHTML = playerScore
+    document.getElementById("display-question").innerHTML = currentQuestion.question;
+    document.getElementById("option-one-label").innerHTML = currentQuestion.optionA;
+    document.getElementById("option-two-label").innerHTML = currentQuestion.optionB;
+    document.getElementById("option-three-label").innerHTML = currentQuestion.optionC;
+    document.getElementById("option-four-label").innerHTML = currentQuestion.optionD;
+
+}
+
+
+function checkForAnswer() {
+    const currentQuestion = shuffledQuestions[menuNumber] //gets current Question 
+    const currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
+    const options = document.getElementsByName("option"); //gets all elements in dom with name of 'option' (in this the radio inputs)
+    let correctOption = null
+
+    options.forEach((option) => {
+        if (option.value === currentQuestionAnswer) {
+            //get's correct's radio input with correct answer
+            correctOption = option.labels[0].id
+        }
+    })
+
+    //checking to make sure a radio input has been checked or an option being chosen
+    if (options[0].checked === false && options[1].checked === false && options[2].checked === false && options[3].checked == false) {
+        document.getElementById('option-modal').style.display = "flex"
+    }
+
+    //checking if checked radio button is same as answer
+    options.forEach((option) => {
+        if (option.checked === true && option.value === currentQuestionAnswer) {
+            document.getElementById(correctOption).style.backgroundColor = "lightgreen"
+            playerScore++ //adding to player's score
+            menuNumber++ //adding 1 to menu so has to display next question..
+            //set to delay question number till when next question loads
+            setTimeout(() => {
+                questionNumber++
+            }, 1000)
+        }
+
+        else if (option.checked && option.value !== currentQuestionAnswer) {
+            const wrongLabelId = option.labels[0].id
+            document.getElementById(wrongLabelId).style.backgroundColor = "red"
+            document.getElementById(correctOption).style.backgroundColor = "green"
+            wrongAttempt++ //adds 1 to wrong attempts 
+            menuNumber++
+            //set to delay question number till when next question loads
+            setTimeout(() => {
+                questionNumber++
+            }, 1000)
+        }
+    })
+}
+
+
+
+//called when the next button is called
+function handleNextQuestion() {
+    checkForAnswer() //check if player picked right or wrong option
+    unCheckRadioButtons()
+    //delays next question displaying for a second just for some effects so questions don't rush in on player
+    setTimeout(() => {
+        if (menuNumber <= 9) {
+//displays next question as long as menu number isn't greater than 9, remember menu number starts from 0, so menu 9 is question 10
+            NextQuestion(menuNumber)
+        }
+        else {
+            handleEndGame()//ends game if menu number greater than 9 meaning we're already at the 10th question
+        }
+        resetOptionBackground()
+    }, 1000);
+}
+
+//sets options background back to null after display the right/wrong colors
+function resetOptionBackground() {
+    const options = document.getElementsByName("option");
+    options.forEach((option) => {
+        document.getElementById(option.labels[0].id).style.backgroundColor = ""
+    })
+}
+
+// unchecking all radio buttons for next question(can be done with map or foreach loop also)
+function unCheckRadioButtons() {
+    const options = document.getElementsByName("option");
+    for (let i = 0; i < options.length; i++) {
+        options[i].checked = false;
+    }
+}
+
+// function for when all questions being answered
+function handleEndGame() {
+    let remark = null
+    let remarkColor = null
+
+    // condition check for player remark and remark color
+    if (playerScore <= 3) {
+        remark = "Bad Grades, Keep Practicing."
+        remarkColor = "red"
+    }
+    else if (playerScore >= 4 && playerScore < 7) {
+        remark = "Average Grades, You can do better."
+        remarkColor = "orange"
+    }
+    else if (playerScore >= 7) {
+        remark = "Excellent, Keep the good work going."
+        remarkColor = "green"
+    }
+    const playerGrade = (playerScore / 10) * 100
+
+    //data to display to score board
+    document.getElementById('remarks').innerHTML = remark
+    document.getElementById('remarks').style.color = remarkColor
+    document.getElementById('grade-percentage').innerHTML = playerGrade
+    document.getElementById('wrong-answers').innerHTML = wrongAttempt
+    document.getElementById('right-answers').innerHTML = playerScore
+    document.getElementById('score-modal').style.display = "flex"
+
+}
+
+//closes score modal, resets game and reshuffles questions
+function closeScoreModal() {
+    questionNumber = 1
+    playerScore = 0
+    wrongAttempt = 0
+    menuNumber = 0
+    shuffledQuestions = []
+    NextQuestion(menuNumber)
+    document.getElementById('score-modal').style.display = "none"
+}
+
+//function to close warning modal
+function closeOptionModal() {
+    document.getElementById('option-modal').style.display = "none"
+}
+    </script>
+</body>
+</html>
