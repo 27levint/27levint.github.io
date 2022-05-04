@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width initial-scale=1">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>China's History (Part One) - Study Guide</title>
+    <title>China's History (Part Two) - Study Guide</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <style>
    @import url('https://fonts.googleapis.com/css2?family=Archivo&family=Nunito&family=Source+Sans+Pro&family=Work+Sans&display=swap');
@@ -338,7 +338,17 @@ input[type=radio]:checked ~ .option {
    .next-button-container {
      width: 90%;
    }
+  .pulse {
+    display: none;
+  }
+  img {
+    display: none;
+  }
 }
+
+   img {
+     width: 300px;
+   }
 
 a {
   text-decoration: none;
@@ -353,6 +363,56 @@ a {
   @-webkit-keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
+  }
+
+i {
+  font-size: 40px;
+  float: left;
+}
+
+   .pulse {
+  position: fixed!important;
+  bottom: 0%;
+  left: 90%;
+  transform: translate(-50%, -800%);
+  background: deepskyblue;
+  border-radius: 5px;
+  width: 250px;
+  height: 50px;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  z-index:1;
+}
+
+.container {
+  position: relative;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.text-block {
+  position: absolute;
+  bottom: 20%;
+  right: 20px;
+  background-color: white;
+  color: black;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 70%;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.text-block h4 {
+  font-size: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .text-block {
+    height: 150px;
+    width: 91%;
   }
  </style>
  <!--font(s)-->
@@ -394,12 +454,12 @@ a {
         </div>
 
         <div class="game-quiz-container">
-
             <div class="game-details-container">
                 <h1>Score : <span id="player-score"></span> / 10</h1>
               <br class="small">
                 <h1> Question : <span id="question-number"></span> / 10</h1>
             </div>
+          <img src="thegreatwallofchina.png">
             <div class="game-question-container">
                 <h1 id="display-question"></h1>
             </div>
@@ -418,7 +478,6 @@ a {
                     </div>
 
                </div>
-
                 <span>
                     <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
                     <label for="option-one" class="option" id="option-one-label"></label>
@@ -448,234 +507,153 @@ a {
             <div class="next-button-container">
                 <button onclick="handleNextQuestion()">Next Question</button>
             </div>
-
+          <a uk-toggle class="" href="specialmode.html" uk-scroll=""><div class="pulse uk-margin-auto uk-text-center"><span uk-icon="icon: receiver;ratio:2" class="uk-icon"></span><i class="fa fa-toggle-off" style="line-height: 50px; font-size: 20px; margin-right: 1px; margin-left: 10px"></i> Enable Special Mode</div></a>
         </div>
     </main>
     <script>
       const questions = [
     {
-        question: "Who can become emperor?",
-        optionA: "The poor",
-        optionB: "Anyone",
-        optionC: "Gentry",
-        optionD: "The rich",
+        question: "Who established the Yuan dynasty?",
+        optionA: "The Japanese",
+        optionB: "The Manchus",
+        optionC: "The Mongols",
+        optionD: "The Russians",
+        correctOption: "optionC"
+    },
+
+    {
+        question: "The Yuan Dynasty was _",
+        optionA: "The smallest land empire in history",
+        optionB: "The largest land empire in history",
+        optionC: "The smallest empire in history",
+        optionD: "The largest empire in history",
         correctOption: "optionB"
     },
 
     {
-        question: "What is the term limit for an emperor?",
-        optionA: "A decade",
-        optionB: "4 years",
-        optionC: "♾",
-        optionD: "20 years",
-        correctOption: "optionC"
-    },
-
-    {
-        question: "What happens when a dynasty ends?",
-        optionA: "A new one begins",
-        optionB: "Famine occurs",
-        optionC: "Natural disasters occur",
-        optionD: "The peasants revolt",
+        question: "The Ming dynasty was established by a _",
+        optionA: "Buddhist Monk",
+        optionB: "Rich Gentry",
+        optionC: "Artisan",
+        optionD: "Merchant",
         correctOption: "optionA"
     },
 
     {
-        question: "Authority",
-        optionA: "Being a ruler",
-        optionB: "Winning",
-        optionC: "Power",
-        optionD: "Being an author",
+        question: "Ming means...",
+        optionA: "My king",
+        optionB: "Dark/Shadow",
+        optionC: "Bright/Light",
+        optionD: "My wing",
         correctOption: "optionC"
     },
 
     {
-        question: "Divine",
-        optionA: "Godlike",
-        optionB: "Seeing the future",
-        optionC: "Being an oracle",
-        optionD: "Being a ruler",
+        question: "Which dynasty was China's last?",
+        optionA: "Qing",
+        optionB: "Ming",
+        optionC: "Yuan",
+        optionD: "CCP",
         correctOption: "optionA"
     },
 
     {
-        question: "Modest",
-        optionA: "Unordinary",
-        optionB: "Common",
-        optionC: "Peasant",
-        optionD: "Being rich",
+        question: "Who set up the Qing dynasty?",
+        optionA: "The Japanese",
+        optionB: "The Manchus",
+        optionC: "The Mongolians",
+        optionD: "The Russians",
         correctOption: "optionB"
     },
 
     {
-        question: "The Mandate of Heaven was created by the ___ dynasty",
-        optionA: "Han",
-        optionB: "Qin",
-        optionC: "Zhou",
-        optionD: "Shang",
+        question: "What did the foreigners win the right to?",
+        optionA: "Bourgeoisie",
+        optionB: "Totalitarianism",
+        optionC: "Extraterritoriality",
+        optionD: "Egalitarian",
         correctOption: "optionC"
     },
 
     {
-        question: "This dynasty created oracle bones",
-        optionA: "Han",
-        optionB: "Qin",
-        optionC: "Zhou",
-        optionD: "Shang",
+        question: "A doctrine is _",
+        optionA: "A taught, a fifth, and a farce",
+        optionB: "Thinking, having faith, and forcing",
+        optionC: "A thought, a faith, and the force",
+        optionD: "A thought, a faith, and a force",
         correctOption: "optionD"
     },
 
     {
-        question: "The ancient Chinese bought ___ to please their ancestors",
-        optionA: "Silver vessels",
-        optionB: "Bronze vessels",
-        optionC: "Gold vessels",
-        optionD: "Jade vessels",
+        question: "Who does Baby Bear represent?",
+        optionA: "The Chinese Government",
+        optionB: "The Chinese People",
+        optionC: "The foreigners",
+        optionD: "The Japanese",
         correctOption: "optionB"
     },
 
     {
-        question: "The ancient Chinese furnished ___ to please their ancestors",
-        optionA: "Brothers",
-        optionB: "Coffins",
-        optionC: "The pyramids",
-        optionD: "The tombs",
+        question: "Who started the boxer rebellion?",
+        optionA: "The Squarers",
+        optionB: "The Trianglers",
+        optionC: "The Circlers",
+        optionD: "The Boxers",
         correctOption: "optionD"
     },
 
     {
-        question: "The Zhou dynasty lasted for ___ years",
-        optionA: "15",
-        optionB: "400",
-        optionC: "800",
-        optionD: "1000",
+        question: "Who wrote The Three Principles of the People?",
+        optionA: "Puyi",
+        optionB: "Mao Zedong",
+        optionC: "Sun Yat-sen",
+        optionD: "Karl Marx",
         correctOption: "optionC"
     },
 
-    {
-        question: "Avoid what is strong. Attack what is weak.",
-        optionA: "Sun Tzu",
-        optionB: "Daoism",
-        optionC: "Legalism",
-        optionD: "Confucianism",
-        correctOption: "optionA"
-    },
-
 
     {
-        question: "Who created Legalism?",
-        optionA: "Laozi",
-        optionB: "Han Feizi",
-        optionC: "Sun Tzu",
-        optionD: "Kong Fuzi",
+        question: "Who is the chairman of the CCP?",
+        optionA: "Puyi",
+        optionB: "Mao Zedong",
+        optionC: "Sun Yat-sen",
+        optionD: "Karl Marx",
         correctOption: "optionB"
     },
 
     {
-        question: "Which dynasty was influenced by Daoism and Confucianism?",
-        optionA: "Shang",
-        optionB: "Qin",
-        optionC: "Zhou",
-        optionD: "Han",
+        question: "Who won the civil war in 1949?",
+        optionA: "Nationalists",
+        optionB: "Communists",
+        optionC: "Japanese",
+        optionD: "Russians",
+        correctOption: "optionB"
+    },
+
+    {
+        question: "Who created the idea of communism?",
+        optionA: "Puyi",
+        optionB: "Mao Zedong",
+        optionC: "Sun Yat-sen",
+        optionD: "Karl Marx",
         correctOption: "optionD"
     },
 
     {
-        question: "Which dynasty used Legalism?",
-        optionA: "Qin",
-        optionB: "Zhou",
-        optionC: "Han",
-        optionD: "Shang",
-        correctOption: "optionA"
-    },
-
-    {
-        question: "How old was Chao Cheng when he conquered the Zhou dynasty?",
-        optionA: "12",
-        optionB: "13",
-        optionC: "10",
-        optionD: "11",
+        question: "Where did the nationalists set up the Republic of China?",
+        optionA: "China",
+        optionB: "Taiwan",
+        optionC: "Japan",
+        optionD: "Russia",
         correctOption: "optionB"
     },
-
+        
     {
-        question: "The Qin empire started building...",
-        optionA: "The Great Wall of China",
-        optionB: "The Grand Canal",
-        optionC: "Mongolia",
-        optionD: "The Three Gorges Dam",
-        correctOption: "optionA"
-    },
-
-    {
-        question: "Who was the first emperor of the Qin dynasty?",
-        optionA: "Laozi",
-        optionB: "Kong Fuzi",
-        optionC: "Shi Huangdi",
-        optionD: "Sun Tzu",
-        correctOption: "optionC"
-    },
-
-    {
-        question: "Who did Shi Huangdi's policies affect most?",
-        optionA: "Artisans",
-        optionB: "Merchants",
-        optionC: "Peasants",
-        optionD: "Gentry",
-        correctOption: "optionC"
-    },
-
-    {
-        question: "Who started the Han dynasty?",
-        optionA: "Liu Bang",
-        optionB: "Kong Fuzi",
-        optionC: "Shi Huangdi",
-        optionD: "Chinggis Khan",
-        correctOption: "optionA"
-    },
-
-    {
-        question: "What were Han government officials called?",
-        optionA: "Oranges",
-        optionB: "Apples",
-        optionC: "Tax Collectors",
-        optionD: "Mandarins",
-        correctOption: "optionD"
-    },
-
-    {
-        question: "What idea spread along the Silk Road?",
-        optionA: "Catholicism",
-        optionB: "Buddhism",
-        optionC: "Judiasm",
-        optionD: "Sikkhism",
-        correctOption: "optionB"
-    },
-
-    {
-        question: "Which class was the wealthiest?",
-        optionA: "Merchants",
-        optionB: "Peasants",
-        optionC: "Gentry/Aristocrats",
-        optionD: "Artisans",
-        correctOption: "optionC"
-    },
-
-    {
-        question: "Could artisans work for the government?",
-        optionA: "Yes",
-        optionB: "No",
-        optionC: "Maybe",
-        optionD: "So",
-        correctOption: "optionA"
-    },
-
-    {
-        question: "Merchants included bankers",
-        optionA: "Yes",
-        optionB: "No",
-        optionC: "Maybe",
-        optionD: "So",
+        question: "Mao Zedong made everyone memorize _",
+        optionA: "The Litle Red Book",
+        optionB: "Cat in the Hat",
+        optionC: "Han Feizi",
+        optionD: "Communism",
         correctOption: "optionA"
     }
 
